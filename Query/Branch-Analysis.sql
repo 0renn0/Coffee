@@ -29,7 +29,7 @@ FROM house_sales GROUP BY Branch ORDER BY Marketing_ROI DESC LIMIT 10;
 -- Measures revenue generated per employee to assess staff productivity
 SELECT Branch, 
     ROUND(AVG(Daily_Revenue_KES / Number_of_Employees), 2) AS Revenue_Per_Staff
-FROM sales GROUP BY Branch ORDER BY Revenue_Per_Staff DESC LIMIT 5;
+FROM house_sales  GROUP BY Branch ORDER BY Revenue_Per_Staff DESC LIMIT 5;
 
 -- Time-Series Analysis: Monthly Trends
 -- Groups data by month to observe seasonal revenue and customer growth
